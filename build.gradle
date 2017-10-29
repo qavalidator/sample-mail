@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenLocal()
+    }
+    dependencies {
+        classpath "de.qaware.qav:qav-gradle-plugin:1.2.5"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: "de.qaware.qav.gradle.qavalidator"
+// QAvalidator: No config required if we use the default value. See documentation for more details.
+
+group = 'de.qaware.qav'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+
+    // https://mvnrepository.com/artifact/javax.mail/javax.mail-api
+	compile group: 'javax.mail', name: 'javax.mail-api', version: '1.6.0'
+}
+

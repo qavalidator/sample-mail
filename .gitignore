@@ -1,0 +1,10 @@
+
+.idea
+*.iml
+build
+.gradle
+
+target
+
+# Ignore Gradle GUI config
+gradle-app.setting
